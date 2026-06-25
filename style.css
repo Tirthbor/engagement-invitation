@@ -97,13 +97,15 @@ body {
     padding: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     margin-bottom: 15px;
+    overflow: hidden; /* Clips the image corners to the circle */
 }
 
 .logo {
     width: 80px;
     height: 80px;
     mix-blend-mode: multiply;
-    filter: contrast(1.2) grayscale(1); /* Removes off-white tint */
+    border-radius: 50%;
+    clip-path: circle(50% at 50% 50%);
     object-fit: contain;
 }
 
@@ -111,7 +113,8 @@ body {
     width: 60px;
     height: 60px;
     mix-blend-mode: multiply;
-    filter: contrast(1.2) grayscale(1);
+    border-radius: 50%;
+    clip-path: circle(50% at 50% 50%);
 }
 
 .shloka {
@@ -153,10 +156,12 @@ body {
 }
 
 .hero-couple {
-    height: 35vh;
+    width: 90%;
+    max-width: 500px;
+    height: auto;
     mix-blend-mode: multiply;
     object-fit: contain;
-    margin-top: auto;
+    margin-top: 40px;
     margin-bottom: 30px;
 }
 
@@ -268,9 +273,23 @@ body {
     line-height: 1;
 }
 
+.rings-container {
+    background: white;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
 .rings-img {
-    height: 70px;
+    height: 60px;
     mix-blend-mode: multiply;
+    filter: brightness(1.1) contrast(1.2);
+    border-radius: 50%;
+    clip-path: circle(50% at 50% 50%);
     object-fit: contain;
 }
 
